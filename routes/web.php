@@ -17,6 +17,39 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/user', function() {
+    $users = User::all();
+    return response()->json($users);
+});
+
+
+Route::get('/', function () {
+    return view('home');
+    
+});
+
+
+Route::get('/service', function () {
+    return view('service');
+});
+Route::get('/review', function () {
+    return view('review');
+});
+
+Route::get('service', function () {
+    return view('service');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/hotel', function () {
+    return view('hotel');
+});
+
+// Route::get('/hotel', [HotelController::class, 'getAllHotels']);
+// Route::get('/hoteldetail', function () {
+//     return view('hoteldetail');
+// });
 
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

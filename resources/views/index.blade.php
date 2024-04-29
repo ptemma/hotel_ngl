@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Sona Template">
-    <meta name="keywords" content="Sona, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sona | Template</title>
+    <title>Gia Linh SBH</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('faviconhoa.ico') }}" type="image/x-icon">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
@@ -33,7 +34,7 @@
     </div>
 
     <!-- Offcanvas Menu Section Begin -->
-    <div class="offcanvas-menu-overlay"></div>
+    {{-- <div class="offcanvas-menu-overlay"></div>
     <div class="canvas-open">
         <i class="icon_menu"></i>
     </div>
@@ -55,7 +56,7 @@
                     </ul>
                 </div>
             </div>
-            <a href="#" class="bk-btn">Booking Now</a>
+            <a href="/login" class="bk-btn">Login Now</a>
         </div>
         <nav class="mainmenu mobile-menu">
             <ul>
@@ -82,10 +83,10 @@
             <a href="#"><i class="fa fa-instagram"></i></a>
         </div>
         <ul class="top-widget">
-            <li><i class="fa fa-phone"></i> (12) 345 67890</li>
-            <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+            <li><i class="fa fa-phone"></i> 0943334824 </li>
+            <li><i class="fa fa-envelope"></i> ngglinh02@gmail.com </li>
         </ul>
-    </div>
+    </div> --}}
     <!-- Offcanvas Menu Section End -->
 
     <!-- Header Section Begin -->
@@ -95,8 +96,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="tn-left">
-                            <li><i class="fa fa-phone"></i> (12) 345 67890</li>
-                            <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+                            <li><i class="fa fa-phone"></i> 0943334824 </li>
+                            <li><i class="fa fa-envelope"></i> ngglinh02@gmail.com </li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
@@ -107,7 +108,7 @@
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Booking Now</a>
+                            <a href="/login" class="bk-btn">Login Now</a>
                             <div class="language-option">
                                 <img src="{{ asset('assests/images/flag.jpg') }}" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>
@@ -126,31 +127,20 @@
         <div class="menu-item">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2">
-                        <div class="logo">
-                            <a href="./index.html">
-                                <img src="{{ asset('assests/images/logo.png') }}" alt="">
-                            </a>
-                        </div>
+                    <div class="col-lg-2" style="margin-top: 20px;">
+                        <a href="/" style="font-family:monospace;">
+                            <h4 class="text-black mb-3" style="font-size: 40px;">Gia Linh</h4>
+                        </a>
                     </div>
+                    
                     <div class="col-lg-10">
                         <div class="nav-menu">
-                            <nav class="mainmenu">
-                                <ul>
-                                    <li class="active"><a href="./index.html">Home</a></li>
-                                    <li><a href="./rooms.html">Rooms</a></li>
-                                    <li><a href="./about-us.html">About Us</a></li>
-                                    <li><a href="./pages.html">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./room-details.html">Room Details</a></li>
-                                            <li><a href="./blog-details.html">Blog Details</a></li>
-                                            <li><a href="#">Family Room</a></li>
-                                            <li><a href="#">Premium Room</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./blog.html">News</a></li>
-                                    <li><a href="./contact.html">Contact</a></li>
-                                </ul>
+                            <nav class="mainmenu">  
+                                    <li class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
+                                    <li class="nav-item nav-link {{ Request::is('/hotel') ? 'active' : '' }}"><a href="/hotel">Hotel</a></li>
+                                    <li class="nav-item nav-link {{ Request::is('/review') ? 'active' : '' }}"><a href="/review">Review</a>
+                                    <li class="nav-item nav-link {{ Request::is('/service') ? 'active' : '' }}"><a href="/service">Service</a>
+                                    <li class="nav-item nav-link {{ Request::is('/contact') ? 'active' : '' }}"><a href="/contact">Contact</a></li>
                             </nav>
                             <div class="nav-right search-switch">
                                 <i class="icon_search"></i>
@@ -169,50 +159,20 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="hero-text">
-                        <h1>Sona A Luxury Hotel</h1>
-                        <p>Here are the best hotel booking sites, including recommendations for international
-                            travel and for finding low-priced hotel rooms.</p>
+                        <h1>Gia Linh search booking hotel</h1>
+                        <p>Find Your Perfect Stay with Ease - Book Hotels Hassle-Free!</p>
                         <a href="#" class="primary-btn">Discover Now</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
-                    <div class="booking-form">
-                        <h3>Booking Your Hotel</h3>
-                        <form action="#">
-                            <div class="check-date">
-                                <label for="date-in">Check In:</label>
-                                <input type="text" class="date-input" id="date-in">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="check-date">
-                                <label for="date-out">Check Out:</label>
-                                <input type="text" class="date-input" id="date-out">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="select-option">
-                                <label for="guest">Guests:</label>
-                                <select id="guest">
-                                    <option value="">2 Adults</option>
-                                    <option value="">3 Adults</option>
-                                </select>
-                            </div>
-                            <div class="select-option">
-                                <label for="room">Room:</label>
-                                <select id="room">
-                                    <option value="">1 Room</option>
-                                    <option value="">2 Room</option>
-                                </select>
-                            </div>
-                            <button type="submit">Check Availability</button>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
         </div>
         <div class="hero-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="{{ asset('assests/images/hero/hero-1.jpg') }}"></div>
-            <div class="hs-item set-bg" data-setbg="{{ asset('assests/images/hero/hero-2.jpg') }}"></div>
-            <div class="hs-item set-bg" data-setbg="{{ asset('assests/images/hero/hero-3.jpg') }}"></div>
+            <div class="hs-item set-bg" data-setbg="{{ asset('assests/images/home/hotel1.jpg') }}"></div>
+            <div class="hs-item set-bg" data-setbg="{{ asset('assests/images/home/hotel2.jpg') }}"></div>
+            <div class="hs-item set-bg" data-setbg="{{ asset('assests/images/home/hotel3.jpg') }}"></div>
         </div>
     </section>
     <!-- Hero Section End -->
@@ -224,14 +184,12 @@
                 <div class="col-lg-6">
                     <div class="about-text">
                         <div class="section-title">
-                            <span>About Us</span>
-                            <h2>Intercontinental LA <br />Westlake Hotel</h2>
+                            <span>Welcome to </span>
+                            <h2>Gia Linh <br />Search Booking Hotel</h2>
                         </div>
-                        <p class="f-para">Sona.com is a leading online accommodation site. We’re passionate about
-                            travel. Every day, we inspire and reach millions of travelers across 90 local websites in 41
-                            languages.</p>
-                        <p class="s-para">So when it comes to booking the perfect hotel, vacation rental, resort,
-                            apartment, guest house, or tree house, we’ve got you covered.</p>
+                        
+                        <p class="f-para">Welcome to our hotel search and booking page!</p>
+                        <p class="s-para">Searching and booking hotels has never been easier. With a convenient booking system and extensive hotel database, we will help you find the ideal destination for all your trips. Explore and experience with us today!</p>
                         <a href="#" class="primary-btn about-btn">Read More</a>
                     </div>
                 </div>
@@ -239,10 +197,10 @@
                     <div class="about-pic">
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="{{ asset('assests/images/about/about-1.jpg') }}" alt="">
+                                <img src="{{ asset('assests/images/welcome/w1.jpg') }}" alt="" width="860" height="350">
                             </div>
                             <div class="col-sm-6">
-                                <img src="{{ asset('assests/images/about/about-2.jpg') }}" alt="">
+                                <img src="{{ asset('assests/images/welcome/w2.jpg') }}" alt="" width="860" height="350">
                             </div>
                         </div>
                     </div>
@@ -267,49 +225,43 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-item">
                         <i class="flaticon-036-parking"></i>
-                        <h4>Travel Plan</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
+                        <h4>Loyalty programn</h4>
+                        <p>To thank customers who regularly use our services, we launch a Loyalty program with many attractive incentives</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-item">
                         <i class="flaticon-033-dinner"></i>
-                        <h4>Catering Service</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
+                        <h4>Accumulate points</h4>
+                        <p>Earn points every time you make a reservation, redeem attractive gifts! The higher the level, the greater the benefit!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-item">
                         <i class="flaticon-026-bed"></i>
-                        <h4>Babysitting</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
+                        <h4>Promotions and offers</h4>
+                        <p>Brilliant promotions - Surprisingly cheap prices!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-item">
                         <i class="flaticon-024-towel"></i>
                         <h4>Laundry</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
+                        <p>Sophisticated from clean to fragrant - Our laundry service brings comfort and convenience to all your trips!</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-item">
                         <i class="flaticon-044-clock-1"></i>
-                        <h4>Hire Driver</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
+                        <h4>24/7 Customer Support service</h4>
+                        <p>Unlimited support. Willing to support anytime, anywhere</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-item">
                         <i class="flaticon-012-cocktail"></i>
                         <h4>Bar & Drink</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
+                        <p>"Bringing true joy, a glass of exquisite drink at our bar is the ideal stop on every journey!"</p>
                     </div>
                 </div>
             </div>
@@ -459,27 +411,21 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="testimonial-slider owl-carousel">
                         <div class="ts-item">
-                            <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-                                city, neighborhood and the types of housing options available and absolutely love our
-                                vacation at Sona Hotel.</p>
+                            <p>Khách sạn view đẹp, rộng rãi, nhân viên nhiệt tình..</p>
                             <div class="ti-author">
                                 <div class="rating">
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5> - Alexander Vasquez</h5>
+                                <h5> - Chloe ( Hà Nội - Việt Nam) </h5>
                             </div>
-                            <img src="{{ asset('assests/images/testimonial-logo.png') }}" alt="">
+                            <img src="{{ asset('assests/images/review/review8.jpg') }}" alt="" width="400" height="400">
                         </div>
+
                         <div class="ts-item">
-                            <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-                                city, neighborhood and the types of housing options available and absolutely love our
-                                vacation at Sona Hotel.</p>
+                            <p>một kì nghỉ tuyệt vời cùng gia đình. </p>
                             <div class="ti-author">
                                 <div class="rating">
                                     <i class="icon_star"></i>
@@ -488,9 +434,55 @@
                                     <i class="icon_star"></i>
                                     <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5> - Alexander Vasquez</h5>
+                                <h5> - Khánh Linh (Đà Nẵng - Việt Nam) </h5>
                             </div>
-                            <img src="{{ asset('assests/images/testimonial-logo.png') }}" alt="">
+                            <img src="{{ asset('assests/images/review/review5.jpg') }}" alt="" width="400" height="400">
+                        </div>
+                        
+                        <div class="ts-item">
+                            <p>Great vacation, my family was very satisfied.</p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                                <h5> - Emma (Singapore)</h5>
+                            </div>
+                            <img src="{{ asset('assests/images/review/review4.jpg') }}" alt="" width="400" height="400">
+                        </div>
+
+
+                        <div class="ts-item">
+                            <p>Phòng ốc sạch sẽ và thoải mái, nhân viên thân thiện và nhiệt tình.</p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                                <h5> - Tuệ Mẫn (Bình Phước - Việt Nam)</h5>
+                            </div>
+                            <img src="{{ asset('assests/images/review/review3.jpg') }}" alt="" width="400" height="400">
+                        </div>
+
+                        <div class="ts-item">
+                            <p>Beautiful room, great view and professional service. I am very satisfied and will recommend to my friends and family.</p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                                <h5> - Harry Potter (Hogwarts)</h5>
+                            </div>
+                            <img src="{{ asset('assests/images/review/review1.jpg') }}" alt="" width="400" height="400">
                         </div>
                     </div>
                 </div>
@@ -499,69 +491,7 @@
     </section>
     <!-- Testimonial Section End -->
 
-    <!-- Blog Section Begin -->
-    <section class="blog-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>Hotel News</span>
-                        <h2>Our Blog & Event</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="blog-item set-bg" data-setbg="{{ asset('assests/images/blog/blog-1.jpg') }}">
-                        <div class="bi-text">
-                            <span class="b-tag">Travel Trip</span>
-                            <h4><a href="#">Tremblant In Canada</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-item set-bg" data-setbg="{{ asset('assests/images/blog/blog-2.jpg') }}">
-                        <div class="bi-text">
-                            <span class="b-tag">Camping</span>
-                            <h4><a href="#">Choosing A Static Caravan</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-item set-bg" data-setbg="{{ asset('assests/images/blog/blog-3.jpg') }}">
-                        <div class="bi-text">
-                            <span class="b-tag">Event</span>
-                            <h4><a href="#">Copper Canyon</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="blog-item small-size set-bg"
-                        data-setbg="{{ asset('assests/images/blog/blog-wide.jpg') }}">
-                        <div class="bi-text">
-                            <span class="b-tag">Event</span>
-                            <h4><a href="#">Trip To Iqaluit In Nunavut A Canadian Arctic City</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 08th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-item small-size set-bg"
-                        data-setbg="{{ asset('assests/images/blog/blog-10.jpg') }}">
-                        <div class="bi-text">
-                            <span class="b-tag">Travel</span>
-                            <h4><a href="#">Traveling To Barcelona</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 12th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Blog Section End -->
+   
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
@@ -570,16 +500,15 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="ft-about">
-                            <div class="logo">
-                                <a href="#">
-                                    <img src="{{ asset('assests/images/footer-logo.png') }}" alt="">
+                            <div class="col-lg-2" style="margin-top: 20px;">
+                                <a href="/" style="font-family:monospace;">
+                                    <h4 class="text-white mb-3" style="font-size: 50px;">Gia Linh</h4>
                                 </a>
                             </div>
-                            <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
+                            <p>We inspire and reach millions of travelers<br /> across 90 local hotels</p>
                             <div class="fa-social">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                                 <a href="#"><i class="fa fa-youtube-play"></i></a>
                             </div>
@@ -589,9 +518,9 @@
                         <div class="ft-contact">
                             <h6>Contact Us</h6>
                             <ul>
-                                <li>(12) 345 67890</li>
-                                <li>info.colorlib@gmail.com</li>
-                                <li>856 Cordia Extension Apt. 356, Lake, United State</li>
+                                <li>0999 68 68 68</li>
+                                <li>searchbookinghotel@gmail.com</li>
+                                <li>999 Đại Lộ Hòa Bình - Cần Thơ - Việt Nam</li>
                             </ul>
                         </div>
                     </div>
@@ -625,9 +554,8 @@
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i
-                                    class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                    target="_blank">Colorlib</a>
+                                </script> All rights reserved<i
+                                    class="fa fa-heart" aria-hidden="true"></i></a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
