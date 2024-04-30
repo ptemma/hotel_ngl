@@ -132,15 +132,20 @@
                             <h4 class="text-black mb-3" style="font-size: 40px;">Gia Linh</h4>
                         </a>
                     </div>
-                    
+
                     <div class="col-lg-10">
                         <div class="nav-menu">
-                            <nav class="mainmenu">  
-                                    <li class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
-                                    <li class="nav-item nav-link {{ Request::is('/hotel') ? 'active' : '' }}"><a href="/hotel">Hotel</a></li>
-                                    <li class="nav-item nav-link {{ Request::is('/review') ? 'active' : '' }}"><a href="/review">Review</a>
-                                    <li class="nav-item nav-link {{ Request::is('/service') ? 'active' : '' }}"><a href="/service">Service</a>
-                                    <li class="nav-item nav-link {{ Request::is('/contact') ? 'active' : '' }}"><a href="/contact">Contact</a></li>
+                            <nav class="mainmenu">
+                                <li class="nav-item nav-link {{ Request::is('/') ? 'active' : '' }}"><a
+                                        href="/">Home</a></li>
+                                <li class="nav-item nav-link {{ Request::is('/hotel') ? 'active' : '' }}"><a
+                                        href="/hotel">Hotel</a></li>
+                                <li class="nav-item nav-link {{ Request::is('/review') ? 'active' : '' }}"><a
+                                        href="/review">Review</a>
+                                <li class="nav-item nav-link {{ Request::is('/service') ? 'active' : '' }}"><a
+                                        href="/service">Service</a>
+                                <li class="nav-item nav-link {{ Request::is('/contact') ? 'active' : '' }}"><a
+                                        href="/contact">Contact</a></li>
                             </nav>
                             <div class="nav-right search-switch">
                                 <i class="icon_search"></i>
@@ -152,6 +157,7 @@
         </div>
     </header>
     <!-- Header End -->
+
     <!-- Breadcrumb Section Begin -->
     <div class="breadcrumb-section">
         <div class="container">
@@ -160,7 +166,7 @@
                     <div class="breadcrumb-text">
                         <h2>Our Hotels</h2>
                         <div class="bt-option">
-                            <a href="/home">Home</a>
+                            <a href="/">Home</a>
                             <span>Hotels</span>
                         </div>
                     </div>
@@ -170,42 +176,45 @@
     </div>
     <!-- Breadcrumb Section End -->
 
+
     <!-- Rooms Section Begin -->
     <section class="rooms-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="room-item">
-                        @foreach($hotels as $hotel) 
-                        <img src="{{ asset('images/' . $hotel->hotel_image) }}" alt="">
-                        <div class="ri-text">
-                            <h4>{{ $hotel->hotel_name}}</h4>
-                            <h3>159$<span>/Pernight</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Size:</td>
-                                        <td>30 ft</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Capacity:</td>
-                                        <td>Max persion 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Bed:</td>
-                                        <td>King Beds</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="#" class="primary-btn">More Details</a>
-                        </div>
+                        @foreach ($hotels as $hotel)
+                            <img src="{{ asset('assests/images/' . $hotel->hotel_images) }}" alt="hotel img">
+                            <div class="ri-text">
+                                <h4>{{ $hotel->name }}</h4>
+                                <h3>{{ $hotel->price }}$<span>/Pernight</span></h3>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Rating:</td>
+                                            <td>{{ $hotel->rating }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>{{ $hotel->amenities }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Address:</td>
+                                            <td>{{ $hotel->address }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>King Beds</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">More Details</a>
+                            </div>
+                        @endforeach
+
                     </div>
                 </div>
-                
+
                 <div class="col-lg-12">
                     <div class="room-pagination">
                         <a href="#">1</a>
@@ -279,8 +288,8 @@
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> All rights reserved<i
-                                    class="fa fa-heart" aria-hidden="true"></i></a>
+                                </script> All rights reserved<i class="fa fa-heart"
+                                    aria-hidden="true"></i></a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
