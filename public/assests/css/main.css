@@ -1,36 +1,53 @@
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
-
+td img {
+    max-width: 100px; /* Đặt chiều rộng tối đa của hình ảnh */
+        height: auto;
+}
+.table {
+    width: 100%;
+    padding: 12px 24px;
+    /* border-collapse: collapse; */
+}
+.table th,
+    .table td {
+        border: 1px solid #090909; /* Định dạng viền */
+        padding: 8px; /* Khoảng cách nội dung từ viền */
+        text-align: left; /* Căn lề nội dung */
+    }
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
 @font-face {
   font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  src: url('../fonts/poppins/Poppins-Bold.ttf');
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  src: url('../fonts/poppins/Poppins-Medium.ttf');
 }
 
 @font-face {
   font-family: Montserrat-Bold;
-  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
+  src: url('../fonts/montserrat/Montserrat-Bold.ttf');
 }
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -81,15 +98,6 @@ ul, li {
 
 
 /*---------------------------------------------*/
-input {
-	outline: none;
-	border: none;
-}
-
-textarea {
-  outline: none;
-  border: none;
-}
 
 textarea:focus, input:focus {
   border-color: transparent !important;
@@ -157,7 +165,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -459,4 +467,52 @@ iframe {
     visibility: visible;
     opacity: 1;
   }
+}
+
+/* CSS cho phân trang */
+.room-pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.room-pagination .pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.room-pagination .pagination li {
+    display: inline;
+}
+
+.room-pagination .pagination li a {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+}
+
+.room-pagination .pagination li.active a {
+    z-index: 2;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+.room-pagination .pagination li.disabled a {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+
+span > svg {
+    width: 24px;
 }

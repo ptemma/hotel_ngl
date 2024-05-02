@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminHotelController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\Register;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HotelController;
+
 use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -56,3 +58,12 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 
 Route::get('/register', [RegisterController::class, 'getViewRegister'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
+
+
+//Admin
+Route::get('/admin/hotels', [AdminHotelController::class, 'index'])->name('Admin.hotels.index');
+Route::get('/admin/hotels/create', [AdminHotelController::class, 'create'])->name('Admin.hotels.create');
+Route::post('/admin/hotels/store', [AdminHotelController::class, 'store'])->name('Admin.hotels.store');
+Route::get('/admin/hotels/{hotel_id}/edit', [AdminHotelController::class, 'edit'])->name('Admin.hotels.edit');
+Route::put('/admin/hotels/{hotel_id}/update', [AdminHotelController::class, 'update'])->name('Admin.hotels.update');
+Route::delete('/admin/hotels/{hotel_id}/delete', [AdminHotelController::class, 'destroy'])->name('Admin.hotels.delete');

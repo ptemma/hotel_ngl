@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{ asset('assests/css/magnific-popup.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assests/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assests/css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assests/css/main.css') }}" type="text/css">
 </head>
 
 <body>
@@ -176,18 +177,17 @@
     </div>
     <!-- Breadcrumb Section End -->
 
-
     <!-- Rooms Section Begin -->
     <section class="rooms-section spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        @foreach ($hotels as $hotel)
+                @foreach ($hotels as $hotel)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="room-item">
                             <img src="{{ asset('assests/images/' . $hotel->hotel_images) }}" alt="hotel img">
                             <div class="ri-text">
                                 <h4>{{ $hotel->name }}</h4>
-                                <h3>{{ $hotel->price }}$<span>/Pernight</span></h3>
+                                <h3 class="">{{ $hotel->price }}$<span>/Pernight</span></h3>
                                 <table>
                                     <tbody>
                                         <tr>
@@ -210,16 +210,15 @@
                                 </table>
                                 <a href="#" class="primary-btn">More Details</a>
                             </div>
-                        @endforeach
 
+                        </div>
                     </div>
-                </div>
-
+                @endforeach
+            </div>
+            <div class="row">
                 <div class="col-lg-12">
                     <div class="room-pagination">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">Next <i class="fa fa-long-arrow-right"></i></a>
+                        {{ $hotels->links() }}
                     </div>
                 </div>
             </div>
